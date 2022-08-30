@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/congratulations_service/static/css/main.5c4ad4b1.css",
+    "main.js": "/congratulations_service/static/js/main.2666def3.js",
+    "static/media/open-sans-v29-latin_cyrillic-regular.woff": "/congratulations_service/static/media/open-sans-v29-latin_cyrillic-regular.357fd6edbf9de5d51a91.woff",
+    "static/media/open-sans-v29-latin_cyrillic-700.woff": "/congratulations_service/static/media/open-sans-v29-latin_cyrillic-700.e2b5a349bd45093d6993.woff",
+    "static/media/open-sans-v29-latin_cyrillic-regular.woff2": "/congratulations_service/static/media/open-sans-v29-latin_cyrillic-regular.d0378a7641136f5d48e3.woff2",
+    "static/media/open-sans-v29-latin_cyrillic-700.woff2": "/congratulations_service/static/media/open-sans-v29-latin_cyrillic-700.6a33ff8a2442a9c6eeb9.woff2",
+    "static/media/vk.svg": "/congratulations_service/static/media/vk.28b4fbc9cbcbc550a981bbceea4e501a.svg",
+    "static/media/tg.svg": "/congratulations_service/static/media/tg.0ee8870c4c1f96246c721e17538c277f.svg",
+    "static/media/pinterest.svg": "/congratulations_service/static/media/pinterest.531d9bb892f9878b49c723f61c1c00d6.svg",
+    "static/media/stumbleupon.svg": "/congratulations_service/static/media/stumbleupon.701f34eae5551345586dcbe365ab9edf.svg",
+    "index.html": "/congratulations_service/index.html",
+    "main.5c4ad4b1.css.map": "/congratulations_service/static/css/main.5c4ad4b1.css.map",
+    "main.2666def3.js.map": "/congratulations_service/static/js/main.2666def3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c4ad4b1.css",
+    "static/js/main.2666def3.js"
+  ]
+}
