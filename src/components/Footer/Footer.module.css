@@ -1,0 +1,46 @@
+.footer{
+    padding: 17px 0;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.social{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+
+button{
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    transition: all .2s ease-in-out;
+}
+button:hover{
+    color: #00C78B;
+    transition: all .2s ease-in-out;
+}
+button > svg{
+    color: #00C78B;
+}
+button:hover > svg{
+    transform: scale(1.2);
+    transition: all .2s ease-in-out;
+}
+@media screen and (max-width: 480px) {
+    .wrapper{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+}
