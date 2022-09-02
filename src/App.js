@@ -6,6 +6,7 @@ import {ImageContextProvider} from "./context/imgContext";
 import {HolidayContextProvider} from "./context/holidayContext";
 
 
+
 const wrapper = {
 	display: 'flex',
 	flexDirection: 'column',
@@ -14,15 +15,17 @@ const wrapper = {
 const App = () => {
 	return (
 		<div style={wrapper}>
-			<HolidayContextProvider>
-				<ImageContextProvider>
-					<TextContextProvider>
-						<Header/>
-						<Card/>
-						<Footer/>
-					</TextContextProvider>
-				</ImageContextProvider>
-			</HolidayContextProvider>
+			
+				{/*<HolidayContextProvider>*/}
+					<ImageContextProvider>
+						{/*<TextContextProvider>*/}
+							<Header/>
+							<Card/>
+							<Footer/>
+						{/*</TextContextProvider>*/}
+					</ImageContextProvider>
+				{/*</HolidayContextProvider>*/}
+			
 		
 		</div>
 	);
