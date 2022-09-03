@@ -4,6 +4,7 @@ import Container from "../Container/Container";
 import Choices from "../Choices/Choices";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchText} from "../../store/textSlice";
+import {fetchImage} from "../../store/imageSlice";
 
 const Header = () => {
 	const dispatch = useDispatch()
@@ -21,7 +22,13 @@ const Header = () => {
 						        }}
 						>Change congrats
 						</button>
-						<button className={styles.button}>Change background</button>
+						<button className={styles.button}
+						        disabled={!holiday}
+						        onClick={() => {
+							        dispatch(fetchImage(holiday))
+						        }}
+						
+						>Change background</button>
 					</div>
 					
 					<Choices/>

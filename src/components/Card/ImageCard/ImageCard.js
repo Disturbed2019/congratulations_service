@@ -1,12 +1,20 @@
-import React, {useContext} from 'react';
-import {imgContext} from "../../../context/imgContext";
+import React from 'react';
+
 import cardBG from '../../../assets/images/card-bg.jpg'
+import {useSelector} from "react-redux";
 
 
 const ImageCard = () => {
-	const {urlImg} = useContext(imgContext)
+	const {urlImg, loading} = useSelector(state => state.image)
 	return (
-		<img src={urlImg || cardBG} alt="bg" width={840} height={520}/>
+		<img src={
+			loading === 'loading'
+			? 'Загрузка....'
+				: urlImg === ''
+			? cardBG
+				: urlImg
+			}
+		     alt="bg" width={840} height={520}/>
 	
 	);
 };

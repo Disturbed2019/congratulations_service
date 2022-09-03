@@ -3,6 +3,7 @@ import styles from './Choices.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {fetchHolidays, setHoliday} from "../../store/holidaysSlice";
 import {fetchText} from "../../store/textSlice";
+import {fetchImage} from "../../store/imageSlice";
 
 
 const Choices = () => {
@@ -37,6 +38,7 @@ const Choices = () => {
 								onClick={() => {
 									dispatch(setHoliday(item[0]))
 									dispatch(fetchText(item[0]))
+									dispatch(fetchImage(item[0]))
 									toggleMenu()
 								}}
 							>
