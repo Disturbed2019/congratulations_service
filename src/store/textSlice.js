@@ -11,6 +11,8 @@ export const fetchText = createAsyncThunk(
 	}
 )
 
+
+
 export const fetchTextId = createAsyncThunk(
 	'text/fetchTextId',
 	async (id) => {
@@ -38,7 +40,7 @@ export const textSlice = createSlice({
 		[fetchText.fulfilled]: (state, action) => {
 			state.loading = 'success'
 			state.text = action.payload.text
-			state.idText = action.payload.idText
+			state.idText = action.payload.id
 		
 		},
 		[fetchText.rejected]: (state) => {
@@ -53,7 +55,7 @@ export const textSlice = createSlice({
 		[fetchTextId.fulfilled]: (state, action) => {
 			state.loading = 'success'
 			state.text = action.payload.text
-			state.idText = action.payload.idText
+			state.idText = action.payload.id
 		},
 		[fetchTextId.rejected]: (state) => {
 			state.loading = 'failed'
