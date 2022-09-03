@@ -5,16 +5,9 @@ import {useSelector} from "react-redux";
 
 
 const ImageCard = () => {
-	const {urlImg, loading} = useSelector(state => state.image)
+	const {urlImg} = useSelector(state => state.image)
 	return (
-		<img src={
-			loading === 'loading'
-			? 'Загрузка....'
-				: urlImg === ''
-			? cardBG
-				: urlImg
-			}
-		     alt="bg" width={840} height={520}/>
+		<img src={ urlImg || cardBG} alt="bg" width={840} height={520}/>
 	
 	);
 };

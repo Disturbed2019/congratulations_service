@@ -6,6 +6,7 @@ import {useSelector} from "react-redux";
 
 const Felicitation = () => {
 	const {text, loading} = useSelector(state => state.text)
+	
 
 
 	

@@ -6,7 +6,6 @@ export const fetchHolidays = createAsyncThunk(
 	async () => {
 		const res = await fetch(URI_API)
 		const data = await res.json()
-		console.log(data)
 		return data
 	}
 )
@@ -19,11 +18,7 @@ export const holidaysSlice = createSlice({
 		loading: '',
 		error: ''
 	},
-	reducers: {
-		setHoliday(state, action) {
-			state.holiday = action.payload
-		}
-	},
+	reducers: {},
 	extraReducers: {
 		[fetchHolidays.pending]: (state) => {
 			state.loading = 'loading'
@@ -40,5 +35,5 @@ export const holidaysSlice = createSlice({
 	}
 })
 
-export const {setHoliday} = holidaysSlice.actions
+
 export default holidaysSlice.reducer

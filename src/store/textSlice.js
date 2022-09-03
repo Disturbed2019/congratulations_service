@@ -6,6 +6,17 @@ export const fetchText = createAsyncThunk(
 	async (holiday) => {
 		const res = await fetch(`${URI_API}text/${holiday}`)
 		const data = await res.json()
+		console.log(data)
+		return data
+	}
+)
+
+export const fetchTextId = createAsyncThunk(
+	'text/fetchTextId',
+	async (id) => {
+		const res = await fetch(`${URI_API}text/${id}`)
+		const data = await res.json()
+		console.log(data)
 		return data
 	}
 )
@@ -15,8 +26,7 @@ export const textSlice = createSlice({
 	initialState: {
 		text: '',
 		idText: '',
-		loading: '',
-		error: ''
+		loading: ''
 	},
 	reducers: {},
 	extraReducers: {
@@ -29,8 +39,23 @@ export const textSlice = createSlice({
 			state.loading = 'success'
 			state.text = action.payload.text
 			state.idText = action.payload.idText
+		
 		},
 		[fetchText.rejected]: (state) => {
+			state.loading = 'failed'
+			state.text = ''
+		},
+		[fetchTextId.pending]: (state) => {
+			state.loading = 'loading'
+			state.text = ''
+			state.idText = ''
+		},
+		[fetchTextId.fulfilled]: (state, action) => {
+			state.loading = 'success'
+			state.text = action.payload.text
+			state.idText = action.payload.idText
+		},
+		[fetchTextId.rejected]: (state) => {
 			state.loading = 'failed'
 			state.text = ''
 		},
